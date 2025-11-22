@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 25% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 20%;
+
+    /* Navy blue - corporate primary */
+    --primary: 215 85% 16%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Gold accent - premium touch */
+    --secondary: 43 96% 56%;
+    --secondary-foreground: 215 85% 16%;
+
+    --muted: 215 20% 96%;
+    --muted-foreground: 215 15% 45%;
+
+    /* Gold accent alternative */
+    --accent: 43 96% 56%;
+    --accent-foreground: 215 85% 16%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 20% 88%;
+    --input: 215 20% 88%;
+    --ring: 215 85% 16%;
+
+    --radius: 1rem;
+
+    /* Charcoal variants */
+    --charcoal: 215 25% 20%;
+    --charcoal-light: 215 20% 35%;
+    
+    /* Premium gold gradient */
+    --gradient-gold: linear-gradient(135deg, hsl(43 96% 56%), hsl(38 92% 50%));
+    
+    /* Navy gradient for hero */
+    --gradient-navy: linear-gradient(135deg, hsl(215 85% 16%), hsl(220 80% 25%));
+    
+    /* Premium shadow */
+    --shadow-premium: 0 10px 40px -10px hsl(215 85% 16% / 0.2);
+    --shadow-gold: 0 10px 30px -10px hsl(43 96% 56% / 0.3);
+    
+    /* Smooth transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 215 30% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 215 25% 14%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 215 25% 14%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 43 96% 56%;
+    --primary-foreground: 215 85% 16%;
+
+    --secondary: 215 25% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 215 25% 18%;
+    --muted-foreground: 215 15% 65%;
+
+    --accent: 43 96% 56%;
+    --accent-foreground: 215 85% 16%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 215 25% 20%;
+    --input: 215 25% 20%;
+    --ring: 43 96% 56%;
+    
+    --charcoal: 215 20% 70%;
+    --charcoal-light: 215 15% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
